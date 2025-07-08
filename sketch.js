@@ -14,14 +14,6 @@ function setup() {
   textAlign(CENTER, CENTER);
   crearParticulas(letras[currentIndex]);
 
-  fetch('https://api.countapi.xyz/hit/tamaracontreras/mensaje-reactivo')
-   .then(res => res.json())
-    .then(data => {
-      console.log('👀 Visita número:', data.value);
-    })
-    .catch(err => {
-      console.error('Error al contar visita:', err);
-    });
 
 }
 
