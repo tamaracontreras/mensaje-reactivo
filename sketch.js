@@ -13,11 +13,15 @@ function setup() {
   textSize(88);
   textAlign(CENTER, CENTER);
   crearParticulas(letras[currentIndex]);
+
   fetch('https://api.countapi.xyz/hit/tamaracontreras/mensaje-reactivo.git')
-  .then(res => res.json())
-  .then(data => {
-    console.log('👀 Visita número:', data.value); // Lo ves en consola
-  });
+   .then(res => res.json())
+    .then(data => {
+      console.log('👀 Visita número:', data.value);
+    })
+    .catch(err => {
+      console.error('Error al contar visita:', err);
+    });
 
 }
 
