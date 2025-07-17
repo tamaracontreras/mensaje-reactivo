@@ -6,3 +6,13 @@ body {
 canvas {
   display: block;
 }
+@media (max-width: 600px) {
+  body {
+    overflow: auto;
+    font-size: 16px;
+  }
+  canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
